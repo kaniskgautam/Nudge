@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Nudge",
+  "version": "0.1.0",
+  "description": "Turn your daily intention into an active focus system",
+
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation",
+    "alarms",
+    "scripting",
+    "activeTab",
+    "notifications"
+  ],
+
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/nudge-overlay.ts"],
+      "css": ["src/content/nudge-overlay.css"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/content/nudge-overlay.css",
+        "icons/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

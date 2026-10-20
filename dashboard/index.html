@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nudge — Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    .logo {
+      font-size: 48px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: -1px;
+    }
+    .accent { color: #6366f1; }
+    p {
+      font-size: 16px;
+      color: #6b7280;
+    }
+    .badge {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">🎯</div>
+  <h1>Nudge <span class="accent">Dashboard</span></h1>
+  <p>Dashboard coming soon — focus insights &amp; history will live here.</p>
+  <span class="badge">Phase 2 ✨</span>
+  <script type="module" src="../src/dashboard/dashboard.ts"></script>
+</body>
+</html>
